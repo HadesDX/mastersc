@@ -1,0 +1,17 @@
+<%- include('main/head') %>
+<%- include('main/nav') %>
+<% 
+if(data==="/" || data==="/home") {
+    data="/index";
+}
+
+console.log(data);
+["/index","/contacto","/service","/team","/skills","/portfolio","/price"].forEach(function(item){
+    if(item===data){
+    %>
+        <%- include('fragment'+data) %>
+    <% 
+    }
+});
+%>
+<%- include('main/foot') %>	
