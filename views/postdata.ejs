@@ -1,0 +1,14 @@
+<%- include('main/head') %>
+<%- include('main/nav') %>
+<p>
+    <%
+    console.log(data);
+    for(var k in data){
+    %>
+    <span><%= k %> : <%= data[k] %></span><br>
+    <%
+    }
+    %>
+</p>
+<%- include('main/foot') %>	
+
