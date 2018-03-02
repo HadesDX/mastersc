@@ -13,8 +13,11 @@ app.use(express.static('views'));
 
 app.set("view engine", "ejs");
 
+/*app.get('*', (req, res) => {
+ res.render("page", {data: req.url});
+ });*/
 app.get('*', (req, res) => {
-    res.render("page", {data: req.url});
+    res.render("bootstrap", {data: req.url});
 });
 
 app.post('/postdata', urlencodedParser, (req, res) => {
